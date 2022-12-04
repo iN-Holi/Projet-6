@@ -45,7 +45,7 @@ exports.getAllSauce = (req, res, next) => {
 };
 
 exports.modifySauce = (req, res, next) => {
-  var sauceObject = {}; // on crée un objet SauceObject vide 
+  let sauceObject = {}; // on crée un objet SauceObject vide 
   if (req.file) {
     // si on upload un fichier 
     sauceObject = {
