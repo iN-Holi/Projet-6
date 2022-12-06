@@ -1,4 +1,4 @@
-const User = require('../models/User');   // modele user (constante qui appelle le fichier user dans le dossier models)
+const User = require('../models/user');   // modele user (constante qui appelle le fichier user dans le dossier models)
 const bcrypt = require('bcrypt');  // importe bcrypt (package de chiffrement bcrypt)
 const jwt = require("jsonwebtoken"); // (package permettant de créer et vérifier les tokens d'authentification)
 
