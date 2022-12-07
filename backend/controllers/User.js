@@ -34,7 +34,7 @@ exports.login = (req, res, next) => {
                         userId: user._id, // l'id d'utilisateur
                         token: jwt.sign( // fontion sign de jsonwebtoken (puis la fonction sign par jsonwebtoken)
                            { userId: user._id }, // 1er argument (1er argument : l'id de l'utilisateur pour verifier que c'est bien cet user)
-                           'RANDOM_TOKEN_SECRET', // 2eme argument la cle secrete de l'encodage normalement c une chaine bcp plus longue et aleatoire pour securiser l'encodage (2e argument : clé d'encodage du token (a changer lors de la mise en prod))
+                           `${process.env.KEY}`, // 2eme argument la cle secrete de l'encodage normalement c une chaine bcp plus longue et aleatoire pour securiser l'encodage (2e argument : clé d'encodage du token (a changer lors de la mise en prod))
                            { expiresIn: '24h' }  // 3eme argument de config appliquer une expiration pour le token (3e argument : temps d'expiration du token)
                         )   
                     });
