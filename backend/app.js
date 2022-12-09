@@ -33,7 +33,7 @@ mongoose.connect(
   .catch(() => console.log("Connexion à MongoDB échouée !")); // permet de connecter l'API à la bdd 
 
 
-app.use(express.json()); // intercepte les requetes qui contiennent du json et le met a dispo sur l'objet sur l'ojet requete ds req.body 
+app.use(express.json()); // intercepte les requetes qui contiennent du json et le met a dispo  sur l'ojet requete ds req.body 
 
 app.use("/images", express.static(path.join(__dirname, "images"))); // indique à Express qu'il faut gérer la ressource images de manière statique (un sous-répertoire de notre répertoire de base, __dirname) à chaque fois qu'elle reçoit une requête vers la route /images 
 app.use("/api/auth", userRoutes); // "/route attendu par le front-end", userRoutes 
